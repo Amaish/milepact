@@ -20,21 +20,81 @@
 
         <style>
             html,body {
+                background-color: #d81b60;
                 margin:0;
                 padding:0;
+            }
+            .b-r{
+                border-right: 3px solid red;
+            }
+            .b-l{
+                border-left: 3px solid red;
+            }
+            .b-t{
+                border-top: 3px solid red;
+            }
+            .b-b{
+                border-bottom: 3px solid red;
+            }
+
+            .b-t-l-r{
+                border-top-left-radius: 2%;            
+            }
+            .b-t-r-r{
+                border-top-right-radius: 2%;
+            }
+            .b-b-r-r{
+                border-bottom-right-radius: 2%;
+            }
+            .b-b-l-r{
+                border-bottom-left-radius: 2%;
+            }
+            .bt-t-l-r{
+                border-top-left-radius: 50%;
+            }
+            .bt-b-l-r{
+                border-bottom-left-radius: 50%;
+            }
+            .bt-t-r-r{
+                border-top-right-radius: 50%;
+            }
+            .bt-b-r-r{
+                border-bottom-right-radius: 50%;
             }
         </style>
     </head>
     
     <body>
         <section style="margin:0 auto; padding-top: 5%; height: 100% !important;">
-            <div class="row" style="height: 500px; width: 70%; margin: 0 auto;">
-                <div class="col-md-4" style="background-color: white; height: 100%; border-right:1px solid #e8e8e8; padding: 20px;">
+            <div class="row b-t-r-r b-b-r-r b-t-l-r b-b-l-r" style="height: 500px; width: 70%; background-color: #eceff1; margin: 0 auto; box-shadow: 0 8px 17px rgba(0, 0, 0, 0.2);">
+                <div class="col-md-6 b-t-l-r b-b-l-r" style="background-color: #80cbc4; height: 100%;">
                     Here is the image
                 </div>
-                <div class="col-md-8" style="background-color: white; height: 100%; padding: 20px;">
-                    Here is the form 
-                </div>
+                <div class="col-sm-6 b-t-r-r b-b-r-r"style=" height: 100%; background-color: #455a64; padding-top: 2%;">   
+                    <div class="pull-right">
+                                <button type="button" class="btn palette-Blue-Grey bg waves-effect bt-t-l-r bt-b-l-r" disabled="disabled">Sign In</button>
+                                <a href="#"><button type="button" class="btn palette-Teal bg waves-effect bt-t-r-r bt-b-r-r">Sign Up</button></a>
+                            </div>
+                        <br>
+                        <div class="input-group "style = "padding-top: 5%;" >
+                            <span class="input-group-addon"><i class="zmdi zmdi-email"></i></span>
+                            <div class="fg-line">
+                                <input type="text" class="form-control" placeholder="Email Address" id="email" >
+                            </div>
+                        </div>
+
+                        <br>
+
+                        <div class="input-group"style = "padding-bottom: 2%;" >
+                            <span class="input-group-addon"><i class="zmdi zmdi-key"></i></span>
+                            <div class="fg-line">
+                                <input type="text" class="form-control" placeholder="Password" id="password">
+                            </div>
+                        </div>
+                        <button id="signinagent" class="btn palette-Teal bg btn-block waves-effect">Sign in</button>
+                        <a href="#"><p class="text-muted text-center"style = "color: white; padding-top: 2%;"><small>Forgot Password?</small></p></a>
+                    </div>
+                    
             </div>
         </section>
         
