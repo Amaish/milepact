@@ -18,15 +18,9 @@
       <link href="css/app.min.1.css" rel="stylesheet">
       <link href="css/app.min.2.css" rel="stylesheet">
       <style>
-         /* html,body {
-         /* background-color:#d87890; 
-         background: linear-gradient(#783048, #d87890);
-         margin:0;
-         padding:0;
-         } */
          body{
-         background:#26a69a;
-         background: radial-gradient(#a7ffeb, #009688);
+         background:#d87890;
+         background: linear-gradient(to right,#783048, #d87890, #783048);
          }
          .btn-padding-left{
          padding-left: 10%;
@@ -68,27 +62,29 @@
          border-bottom-right-radius: 40%;
          }
          .bt-c{
-         background-color: #9e9e9e;
+         background-color: #60d8c0;
          }
          ul.nav li.active a {
          color: white !important;
          }
          .d-scr{
-            height:100%;
-            overflow-y:auto;
+            overflow-y:auto;            
          }
          .t-c-b{
             color: black;
+         }
+         ::-webkit-scrollbar { 
+         display: none; 
          }
       </style>
    </head>
    <body>
       <section id="backgroundBody" style="margin:0 auto; padding-top: 5%; height: 100% !important;">
-         <div class="row b-t-r-r b-b-r-r b-t-l-r b-b-l-r" style="height: 500px; width: 70%; background-color: #eceff1; margin: 0 auto; box-shadow: 0 8px 17px rgba(0, 0, 0, 0.2);">
-         <div class="col-md-6 b-t-l-r b-b-l-r" style="background-color: #9e9e9e; height: 100%;">
+         <div class="row b-t-r-r b-b-r-r b-t-l-r b-b-l-r" style="height: 500px; width: 70%; background-color: #60d8c0; margin: 0 auto; box-shadow: 0 8px 17px rgba(0, 0, 0, 0.2);">
+         <div class="col-md-6 b-t-l-r b-b-l-r" style="background-color: #60d8c0; height: 100%;">
             Here is the image
          </div>
-         <div class="col-sm-6 b-t-r-r b-b-r-r d-scr"style="background-color: #424242; height: 100%; padding-top: 2%;">
+         <div class="col-sm-6 b-t-r-r b-b-r-r d-scr"style="background-color: #303048; height: 100%; padding-top: 2%;">
             <section id="register">
                <div class="container">
                   <div class="form-content">
@@ -220,9 +216,9 @@
                                     <i class="input-helper"></i>
                                     <small style = "color: black;">I have read and agreed to the terms and conditions</small>
                                     </label>
-                                    <div class="btn-padding-left">
-                                       <button id="signupbtn" class="btn-lg bt-c bt-b-r" style = "color: black;"><small>Sign Up</small></button>
-                                    </div>
+                                    <div class="col-sm-4 pull-left">
+                                          <button id="signupbtn" class="btn btn-block bt-c bt-b-r" style = "color: black;">Sign Up</button>
+                                       </div>
                                  </form>
                               </div>
                               <!-- <div class="btn-group bt-b-r bt-c pull-right">
