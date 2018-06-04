@@ -12,8 +12,7 @@
       <link href='https://fonts.googleapis.com/css?family=NTR' rel='stylesheet'>
       <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
       <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-      <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-      <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+      
       <!-- CSS -->
       <link href="css/app.min.1.css" rel="stylesheet">
       <link href="css/app.min.2.css" rel="stylesheet">
@@ -68,10 +67,10 @@
          color: white !important;
          }
          .d-scr{
-            overflow-y:auto;            
+         overflow-y:auto;            
          }
          .t-c-b{
-            color: black;
+         color: black;
          }
          ::-webkit-scrollbar { 
          display: none; 
@@ -79,8 +78,8 @@
       </style>
    </head>
    <body>
-      <section id="backgroundBody" style="margin:0 auto; padding-top: 5%; height: 100% !important;">
-         <div class="row b-t-r-r b-b-r-r b-t-l-r b-b-l-r" style="height: 500px; width: 70%; background-color: #60d8c0; margin: 0 auto; box-shadow: 0 8px 17px rgba(0, 0, 0, 0.2);">
+      <section id="backgroundBody" style="margin:0 auto; padding-top: 3%; height: 700px !important;">
+         <div class="row b-t-r-r b-b-r-r b-t-l-r b-b-l-r" style="height: 600px; width: 80%; background-color: #60d8c0; margin: 0 auto; box-shadow: 0 8px 17px rgba(0, 0, 0, 0.2);">
          <div class="col-md-6 b-t-l-r b-b-l-r" style="background-color: #60d8c0; height: 100%;">
             Here is the image
          </div>
@@ -132,6 +131,9 @@
                                        </div>
                                     </fieldset>
                                     <div class="col-sm-4 pull-left">
+                                    <div class="checkbox m-b">
+                                        <p id="ilsresp"></p>
+                                    </div>
                                        <button id="signinbtn" class="btn btn-block bt-c bt-b-r" style = "color: black;">Sign In</button>
                                     </div>
                                     <div class="col-sm-8 pull-left">
@@ -152,6 +154,17 @@
                                           </div>
                                           <div class="col-md-11 pull-right">
                                              <input type="text" class="form-control" placeholder=" Company Name" id="name" >
+                                          </div>
+                                       </div>
+                                       <br>
+                                       <div class="input-group row"style = "width: 100%;">
+                                          <div class="col-md-1 pull-left">
+                                             <label for="typeOfBusiness">
+                                             <span class="input-group-addon" ><i class="zmdi zmdi-chart zmdi-hc-fw" ></i></span>
+                                             </label>
+                                          </div>
+                                          <div class="col-md-11 pull-right">
+                                             <input type="text" class="form-control" placeholder=" Type of Business" id="typeOfBusiness" >
                                           </div>
                                        </div>
                                        <br>
@@ -217,8 +230,11 @@
                                     <small style = "color: black;">I have read and agreed to the terms and conditions</small>
                                     </label>
                                     <div class="col-sm-4 pull-left">
-                                          <button id="signupbtn" class="btn btn-block bt-c bt-b-r" style = "color: black;">Sign Up</button>
-                                       </div>
+                                    <div class="checkbox m-b">
+                                        <p id="lsresp"></p>
+                                    </div>
+                                       <button id="signupbtn" class="btn btn-block bt-c bt-b-r" style = "color: black;">Sign Up</button>
+                                    </div>
                                  </form>
                               </div>
                               <!-- <div class="btn-group bt-b-r bt-c pull-right">
@@ -235,11 +251,19 @@
          </div>
       </section>
       <!-- Javascript Libraries -->
+      <footer id="footer">
+        <div class="text-center padder clearfix" style="color: black">
+            <p><small>MilePact<br>
+			&copy; 2018</small></p>
+        </div>
+    </footer>
+      <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
       <script src="vendors/bower_components/jquery/dist/jquery.min.js"></script>
       <script src="vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-      <script src="vendors/bower_components/Waves/dist/waves.min.js"></script>
+      <script src="vendors/bower_components/Waves/dist/waves.min.js"></script>      
+      <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>      
       <script src="js/functions.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src="js/main.js"></script>
    </body>
 </html>
