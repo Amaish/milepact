@@ -89,7 +89,7 @@
                   <div class="form-content">
                      <div class ="tabbable-panel">
                         <div class ="tabbable-line">
-                           <ul class="nav nav-tabs">
+                           <ul class="nav nav-tabs" id="myTab">
                               <li class="active"><a href="#signIn" data-toggle="tab" style="color: black">Sign In</a></li>
                               <li><a href="#signUp" data-toggle="tab" style="color: black">Sign Up</a></li>
                            </ul>
@@ -99,23 +99,23 @@
                                     <fieldset>
                                        <div class="input-group row"style = "width: 100%;">
                                           <div class="col-md-1 pull-left">
-                                             <label for="email">
+                                             <label for="l_email">
                                              <span class="input-group-addon" ><i class="zmdi zmdi-email" ></i></span>
                                              </label>
                                           </div>
                                           <div class="col-md-11 pull-right">
-                                             <input type="text" class="form-control" placeholder=" Email Address" id="email" >
+                                             <input type="text" class="form-control" placeholder=" Email Address" id="l_email" >
                                           </div>
                                        </div>
                                        <br>
                                        <div class="input-group row"style = "padding-bottom:5%; width: 100%;" >
                                           <div class="col-md-1 pull-left">
-                                             <label for="password">
+                                             <label for="l_password">
                                              <span class="input-group-addon" ><i class="zmdi zmdi-key" ></i></span>
                                              </label>
                                           </div>
                                           <div class="col-md-11 pull-right">
-                                             <input type="text" class="form-control" placeholder=" Password" id="password">
+                                             <input type="text" class="form-control" placeholder=" Password" id="l_password">
                                           </div>
                                        </div>
                                        <div class="row">
@@ -224,7 +224,7 @@
                                        </div>
                                        <br>
                                     </fieldset>
-                                    <label style="padding-bottom: 5%; padding-left: 4%;">
+                                    <label style="padding-left: 4%;">
                                     <input type="checkbox" value="">
                                     <i class="input-helper"></i>
                                     <small style = "color: black;">I have read and agreed to the terms and conditions</small>

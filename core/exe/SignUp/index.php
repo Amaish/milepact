@@ -4,7 +4,7 @@
 class SignUpUser
 {
 
-    private $name, $typeOfBusiness, $phoneNumber, $email,  $location, $password;
+    private $name, $typeOfBusiness, $phoneNumber, $email,  $location, $password, $confirmPassword;
 
     function __construct(){
 
@@ -15,7 +15,7 @@ class SignUpUser
 
         include_once($_SERVER["DOCUMENT_ROOT"] . '/milePact/loader.php');
         
-        if(isset($_REQUEST['name']) AND isset($_REQUEST['typeOfBusiness']) AND isset($_REQUEST['phoneNumber']) AND isset($_REQUEST['email'])AND isset($_REQUEST['location'])AND isset($_REQUEST['password'])){
+        if(isset($_REQUEST['name']) AND isset($_REQUEST['typeOfBusiness']) AND isset($_REQUEST['phoneNumber']) AND isset($_REQUEST['email'])AND isset($_REQUEST['location']) AND isset($_REQUEST['confirmPassword']) AND isset($_REQUEST['password'])){
             
             // sanitize variables
 
@@ -25,10 +25,11 @@ class SignUpUser
             $this->email                = mysqli_real_escape_string($conn, $_REQUEST['email']);
             $this->location             = mysqli_real_escape_string($conn, $_REQUEST['location']);
             $this->password             = mysqli_real_escape_string($conn, $_REQUEST['password']);
+            $this->confirmPassword      = mysqli_real_escape_string($conn,$_REQUEST['confirmPassword']);
 
             
             
-            if(empty($this->name) OR empty($this->typeOfBusiness) OR empty($this->phoneNumber) OR empty($this->email) OR empty($this->location) OR empty($this->password)){
+            if(empty($this->name) OR empty($this->typeOfBusiness) OR empty($this->phoneNumber) OR empty($this->email) OR empty($this->location) OR empty($this->password) OR empty($this->confirmPassword)){
                 die('Please fill all fields');
             }
             
@@ -67,7 +68,7 @@ class SignUpUser
             
             // validate information to avoid duplicates
             $phonearguments = array('phoneNumber' => $formated_phone);
-            if(returnExists('agents', $phonearguments) > 0){
+            if(returnExists('users', $phonearguments) > 0){
                 die('The phone number is already registered');
             }
             
@@ -86,15 +87,15 @@ class SignUpUser
                 VALUES('$this->name','$this->email','$formated_phone','$this->location','$encpassword','$date','$code','$this->typeOfBusiness')";
             
             // run query
-            $saveAgent = mysqli_query($conn, $query);
+            $saveUser = mysqli_query($conn, $query);
             
-            if($saveAgent){
+            if($saveUser){
                 $message     = "Hello ".$this->name.", your verfication code is ".$code;
                 //call send function
                 sendMessage($formated_phone,$message);
 
                 // start a session
-                $_SESSION['loggedagent'] = $formated_phone;
+                $_SESSION['loggeduser'] = $formated_phone;
 
                 echo "1";
             }else{

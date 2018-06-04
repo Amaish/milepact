@@ -1,9 +1,8 @@
 $(document).ready(function($) {
     // start of sign up user
-
-    $('#signUp').click(function() {
-        $('#signUp').html('Creating account...');
-        $('#signUp').css("disabled", "1");
+    $('#signupbtn').click(function() {
+        $('#signupbtn').html('Creating account...');
+        $('#signupbtn').css("disabled", "1");
 
 
         var name = $('#name').val();
@@ -12,7 +11,8 @@ $(document).ready(function($) {
         var email = $('#email').val();
         var location = $('#location').val();
         var password = $('#password').val();
-        alert(name);
+        var confirmPassword = $('#confirmPassword').val();
+        alert(email);
 
         $.post("../../../milePact/core/exe/SignUp/", {
             name: name,
@@ -20,23 +20,27 @@ $(document).ready(function($) {
             phoneNumber: phoneNumber,
             email: email,
             location: location,
+            confirmPassword: confirmPassword,
             password: password
 
         }, function(UserSignUpFeedback) {
+            $('.nav-tabs a[href="#signUp"]').tab('show');
             if (UserSignUpFeedback == "1") {
                 $('#lsresp').html('<font color="green">Account created...</font>');
                // window.location.href = "../agent/verify.php";
-                $('#signUp').html('Sign up');
-                $('#signUp').css("disabled", "0");
+                $('#signupbtn').html('Sign up');
+                $('#signupbtn').css("disabled", "0");
                 console.log(UserSignUpFeedback);
             } else {
                 $('#lsresp').html('<font color="red">' + UserSignUpFeedback + '</font>');
-                $('#signUp').html('Sign up');
-                $('#signUp').css("disabled", "0");
+                $('#signupbtn').html('Sign up');
+                $('#signupbtn').css("disabled", "0");
                 console.log(UserSignUpFeedback);
             }
         });
     });
+});
+
 
     // end of sign up user
 
@@ -130,4 +134,3 @@ $(document).ready(function($) {
         });
     });
     //end of resend agent code
-});
