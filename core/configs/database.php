@@ -4,7 +4,7 @@ $server     = "localhost";
 $username   = "root";
 $password   = "";
 
-$database   = "milePact";
+$database   = "name";
 
 $conn = mysqli_connect($server, $username, $password, $database);
 
